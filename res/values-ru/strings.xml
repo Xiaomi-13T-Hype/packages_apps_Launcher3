@@ -233,4 +233,7 @@
     <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Печенье (четыре стороны)"</string>
     <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Печенье (семь сторон)"</string>
     <string name="arch_shape_title" msgid="2213843822192871318">"Арка"</string>
+    <string name="folder_resized">Размер папки изменен: ширина %1$d, высота %2$d</string>
+    <string name="folder_frame_name">Изменить размер папки %1$s</string>
+    <string name="qsb_search_hint">Поиск на телефоне и в Интернете</string>
 </resources>
