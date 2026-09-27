@@ -161,13 +161,13 @@
     <dimen name="motion_pause_detector_speed_trackpad_somewhat_fast">0.7dp</dimen>
     <dimen name="motion_pause_detector_speed_fast">1.4dp</dimen>
     <dimen name="motion_pause_detector_min_displacement_from_app">36dp</dimen>
-    <dimen name="quickstep_fling_threshold_speed">0.5dp</dimen>
+    <dimen name="quickstep_fling_threshold_speed">0.35dp</dimen>
 
     <!-- Launcher app transition -->
     <dimen name="closing_window_trans_y">115dp</dimen>
     <dimen name="closing_freeform_window_trans_y">36dp</dimen>
 
-    <dimen name="quick_switch_scaling_scroll_threshold">100dp</dimen>
+    <dimen name="quick_switch_scaling_scroll_threshold">44dp</dimen>
 
     <dimen name="recents_empty_message_text_size">14sp</dimen>
     <dimen name="recents_empty_message_text_padding">16dp</dimen>
