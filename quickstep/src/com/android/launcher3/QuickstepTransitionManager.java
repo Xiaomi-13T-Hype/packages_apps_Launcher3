@@ -211,15 +211,15 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
      * Since our animations decelerate heavily when finishing, we want to start status bar
      * animations x ms before the ending.
      */
-    public static final int STATUS_BAR_TRANSITION_PRE_DELAY = 60;
+    public static final int STATUS_BAR_TRANSITION_PRE_DELAY = 80;
 
-    public static final long APP_LAUNCH_DURATION = 280;
+    public static final long APP_LAUNCH_DURATION = 380;
 
-    private static final long APP_LAUNCH_ALPHA_DURATION = 100;
-    private static final long APP_LAUNCH_ALPHA_START_DELAY = 20;
+    private static final long APP_LAUNCH_ALPHA_DURATION = 120;
+    private static final long APP_LAUNCH_ALPHA_START_DELAY = 25;
 
-    public static final int ANIMATION_NAV_FADE_IN_DURATION = 180;
-    public static final int ANIMATION_NAV_FADE_OUT_DURATION = 120;
+    public static final int ANIMATION_NAV_FADE_IN_DURATION = 220;
+    public static final int ANIMATION_NAV_FADE_OUT_DURATION = 140;
     public static final long ANIMATION_DELAY_NAV_FADE_IN =
             APP_LAUNCH_DURATION - ANIMATION_NAV_FADE_IN_DURATION;
     public static final Interpolator NAV_FADE_IN_INTERPOLATOR =
@@ -227,21 +227,21 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     public static final Interpolator NAV_FADE_OUT_INTERPOLATOR =
             new PathInterpolator(0.2f, 0f, 1f, 1f);
 
-    public static final int RECENTS_LAUNCH_DURATION = 240;
-    private static final int LAUNCHER_RESUME_START_DELAY = 70;
-    private static final int CLOSING_TRANSITION_DURATION_MS = 240;
-    public static final int SPLIT_LAUNCH_DURATION = 280;
-    public static final int SPLIT_DIVIDER_ANIM_DURATION = 80;
+    public static final int RECENTS_LAUNCH_DURATION = 300;
+    private static final int LAUNCHER_RESUME_START_DELAY = 80;
+    private static final int CLOSING_TRANSITION_DURATION_MS = 280;
+    public static final int SPLIT_LAUNCH_DURATION = 320;
+    public static final int SPLIT_DIVIDER_ANIM_DURATION = 90;
 
-    public static final int CONTENT_ALPHA_DURATION = 160;
-    public static final int TRANSIENT_TASKBAR_TRANSITION_DURATION = 300;
-    public static final int PINNED_TASKBAR_TRANSITION_DURATION = 420;
-    public static final int TASKBAR_TO_APP_DURATION = 420;
+    public static final int CONTENT_ALPHA_DURATION = 180;
+    public static final int TRANSIENT_TASKBAR_TRANSITION_DURATION = 350;
+    public static final int PINNED_TASKBAR_TRANSITION_DURATION = 500;
+    public static final int TASKBAR_TO_APP_DURATION = 500;
     // TODO(b/236145847): Tune TASKBAR_TO_HOME_DURATION to 383 after conflict with unlock animation
     // is solved.
-    private static final int TASKBAR_TO_HOME_DURATION_FAST = 240;
-    private static final int TASKBAR_TO_HOME_DURATION_SLOW = 450;
-    protected static final int CONTENT_SCALE_DURATION = 250;
+    private static final int TASKBAR_TO_HOME_DURATION_FAST = 260;
+    private static final int TASKBAR_TO_HOME_DURATION_SLOW = 500;
+    protected static final int CONTENT_SCALE_DURATION = 280;
 
     private static final Interpolator APP_LAUNCH_INTERPOLATOR;
     private static final Interpolator APP_LAUNCH_X_INTERPOLATOR;
@@ -250,20 +250,20 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     static {
         Path launchPath = new Path();
         launchPath.moveTo(0f, 0f);
-        launchPath.cubicTo(0.05f, 0.1f, 0.12f, 0.45f, 0.22f, 0.75f);
-        launchPath.cubicTo(0.35f, 0.95f, 0.6f, 1.0f, 1.0f, 1.0f);
+        launchPath.cubicTo(0.05f, 0.02f, 0.10f, 0.20f, 0.20f, 0.50f);
+        launchPath.cubicTo(0.32f, 0.82f, 0.52f, 0.98f, 1.0f, 1.0f);
         APP_LAUNCH_INTERPOLATOR = new PathInterpolator(launchPath);
 
         Path launchXPath = new Path();
         launchXPath.moveTo(0f, 0f);
-        launchXPath.cubicTo(0.05f, 0.15f, 0.12f, 0.55f, 0.22f, 0.82f);
-        launchXPath.cubicTo(0.35f, 0.97f, 0.6f, 1.0f, 1.0f, 1.0f);
+        launchXPath.cubicTo(0.05f, 0.05f, 0.10f, 0.30f, 0.20f, 0.60f);
+        launchXPath.cubicTo(0.32f, 0.88f, 0.52f, 0.99f, 1.0f, 1.0f);
         APP_LAUNCH_X_INTERPOLATOR = new PathInterpolator(launchXPath);
 
         Path pushbackPath = new Path();
         pushbackPath.moveTo(0f, 0f);
-        pushbackPath.cubicTo(0.05f, 0.05f, 0.12f, 0.35f, 0.25f, 0.65f);
-        pushbackPath.cubicTo(0.4f, 0.88f, 0.6f, 0.98f, 1f, 1f);
+        pushbackPath.cubicTo(0.06f, 0.025f, 0.14f, 0.15f, 0.25f, 0.40f);
+        pushbackPath.cubicTo(0.40f, 0.72f, 0.56f, 0.93f, 1f, 1f);
         WORKSPACE_PUSHBACK_INTERPOLATOR = new PathInterpolator(pushbackPath);
     }
 
