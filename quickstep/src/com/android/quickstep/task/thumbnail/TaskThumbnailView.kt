@@ -248,7 +248,11 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         } else {
             R.drawable.ic_recent_camera_locked
         }
-        thumbnailView.setImageResource(icon)
+        try {
+            thumbnailView.setImageResource(icon)
+        } catch (_: Exception) {
+            thumbnailView.setImageResource(R.drawable.ic_recent_app_locked)
+        }
         thumbnailView.scaleType = ImageView.ScaleType.CENTER
         thumbnailView.isInvisible = false
         drawBackground(context.getColor(R.color.recent_app_locked_bg_color))
